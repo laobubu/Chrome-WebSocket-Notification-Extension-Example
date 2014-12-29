@@ -1,29 +1,29 @@
 Chrome-WebSocket-Notification-Extension-Example
 ===============================================
 
-## ËµÃ÷
+## è¯´æ˜
 
-Ò»¸ö¼òµ¥µÄ Chrome ½áºÏ WebSocket µÄÍ¨Öª¹¦ÄÜÀ©Õ¹
+ä¸€ä¸ªç®€å•çš„ Chrome ç»“åˆ WebSocket çš„é€šçŸ¥åŠŸèƒ½æ‰©å±•
 
-Çë½áºÏ[¡¶×ÔÖÆ¼òµ¥µÄ WebSocket ·şÎñÆ÷ + Chrome Í¨ÖªÍÆËÍ²å¼ş¡·](http://note.laobubu.net/archives/websocket-server-and-chrome-notification-extension/) Ò»ÎÄÊ³ÓÃ¡£
+è¯·ç»“åˆ[ã€Šè‡ªåˆ¶ç®€å•çš„ WebSocket æœåŠ¡å™¨ + Chrome é€šçŸ¥æ¨é€æ’ä»¶ã€‹](http://note.laobubu.net/archives/websocket-server-and-chrome-notification-extension/) ä¸€æ–‡é£Ÿç”¨ã€‚
 
-ÆäÖĞÊ¹ÓÃµÄ WebSocket ²âÊÔ·şÎñÆ÷À´×Ô [http://lab.laobubu.net/ws_create.html](http://lab.laobubu.net/ws_create.html) ¡£
+å…¶ä¸­ä½¿ç”¨çš„ WebSocket æµ‹è¯•æœåŠ¡å™¨æ¥è‡ª [http://lab.laobubu.net/ws_create.html](http://lab.laobubu.net/ws_create.html) ã€‚
 
-ÆäÖĞ×¼±¸ÁË¼òµ¥µÄ `WSKeeper` ÀàÀ´´´½¨×Ô¶¯ÖØÁ¬µÄ WebSocket Á¬½Ó£¬ÒÔ¼° `NManager` ÀàÀ´´´½¨ºÍ¹ÜÀíÍ¨Öª¡£
+å…¶ä¸­å‡†å¤‡äº†ç®€å•çš„ `WSKeeper` ç±»æ¥åˆ›å»ºè‡ªåŠ¨é‡è¿çš„ WebSocket è¿æ¥ï¼Œä»¥åŠ `NManager` ç±»æ¥åˆ›å»ºå’Œç®¡ç†é€šçŸ¥ã€‚
 
-## ÍµÀÁ·½°¸
+## å·æ‡’æ–¹æ¡ˆ
 
-Äã¿ÉÒÔÖ±½ÓÊ¹ÓÃÕâ¸öÀ©Õ¹£¬È»ºóĞŞ¸Ä³ÉÄã×Ô¼ºµÄÍ¨ÖªÀ©Õ¹¡£¾ßÌå²Ù×÷ÈçÏÂ£º
+ä½ å¯ä»¥ç›´æ¥ä½¿ç”¨è¿™ä¸ªæ‰©å±•ï¼Œç„¶åä¿®æ”¹æˆä½ è‡ªå·±çš„é€šçŸ¥æ‰©å±•ã€‚å…·ä½“æ“ä½œå¦‚ä¸‹ï¼š
 
-1. ĞŞ¸Ä `manifest.json` ÖĞµÄµØÖ·
-2. ĞŞ¸Ä `background.js` ÖĞÔÚ `Main Code` ÒÔÏÂµÄ´úÂë
-3. ĞŞ¸ÄÍ¼±ê
+1. ä¿®æ”¹ `manifest.json` ä¸­çš„åœ°å€
+2. ä¿®æ”¹ `background.js` ä¸­åœ¨ `Main Code` ä»¥ä¸‹çš„ä»£ç 
+3. ä¿®æ”¹å›¾æ ‡
 
-## ´ó¸ÅÊÇÎÄµµ
+## å¤§æ¦‚æ˜¯æ–‡æ¡£
 
-### WSKeeperÀà
+### WSKeeperç±»
 
-´´½¨×Ô¶¯ÖØÁ¬µÄ WebSocket Á¬½Ó£¬¾ßÌåÓÃ·¨ÈçÏÂ£º
+åˆ›å»ºè‡ªåŠ¨é‡è¿çš„ WebSocket è¿æ¥ï¼Œå…·ä½“ç”¨æ³•å¦‚ä¸‹ï¼š
 ```
 var ws = new WSKeeper(
 	"ws://lab.laobubu.net:8000",	//websocket url
@@ -34,35 +34,35 @@ var ws = new WSKeeper(
 );
 ```
 
-Èç¹ûÒª¶Ï¿ªÁ¬½Ó£¬Ê¹ÓÃ `ws.disconnect()` ¼´¿É¡£
+å¦‚æœè¦æ–­å¼€è¿æ¥ï¼Œä½¿ç”¨ `ws.disconnect()` å³å¯ã€‚
 
-### NManagerÀà
+### NManagerç±»
 
-¸ºÔğ´´½¨ºÍ¹ÜÀíÍ¨Öª¡£
+è´Ÿè´£åˆ›å»ºå’Œç®¡ç†é€šçŸ¥ã€‚
 ```
 var nman = new NManager("sample-prefix-");	//prefix must be unique
 ```
 
-»òÕßÇå³ıÒ»ÌõÍ¨Öª
+æˆ–è€…æ¸…é™¤ä¸€æ¡é€šçŸ¥
 ```
 nman.remove(notificationId)
 ```
 
-Ê¹ÓÃÕâ¸öÀà¿ÉÒÔ¼òµ¥´Ö±©µØ´´½¨ÎÄ×ÖÍ¨Öª¡£Õâ¸öº¯Êı·µ»ØµÄÊÇÍ¨ÖªµÄ ID
+ä½¿ç”¨è¿™ä¸ªç±»å¯ä»¥ç®€å•ç²—æš´åœ°åˆ›å»ºæ–‡å­—é€šçŸ¥ã€‚è¿™ä¸ªå‡½æ•°è¿”å›çš„æ˜¯é€šçŸ¥çš„ ID
 ```
-nman.create("±êÌâ", "ÎÄ×ÖÄÚÈİ", {})
+nman.create("æ ‡é¢˜", "æ–‡å­—å†…å®¹", {})
 ```
 
-Ò²¿ÉÒÔÍæÒ»Ğ©»¨Ñù£º
+ä¹Ÿå¯ä»¥ç©ä¸€äº›èŠ±æ ·ï¼š
 ```
 var options = {
-	url:	"",	//(¿ÉÑ¡) µã»÷ÌáĞÑÊ±×Ô¶¯´ò¿ªµÄ URL
-	buttons: [	//(¿ÉÑ¡) °´Å¥£¬Êı×é
+	url:	"",	//(å¯é€‰) ç‚¹å‡»æé†’æ—¶è‡ªåŠ¨æ‰“å¼€çš„ URL
+	buttons: [	//(å¯é€‰) æŒ‰é’®ï¼Œæ•°ç»„
 		{title: "Button1",	onclick: function(notificationId, index){alert("Hello from message #"+nid)} },
 		{title: "Button2", 	url: "http://laobubu.net"}
-		//Ò»¸ö°´Å¥¶ÔÏó±ØĞëÓĞ title £¨°´Å¥ÎÄ×Ö£©
-		//¿ÉÑ¡ iconUrl ±íÊ¾°´Å¥Í¼±ê URL
-		//¿ÉÑ¡ onclick ¼´°´Å¥±»°´ÏÂÊ±µÄ»Øµ÷º¯Êı£¬»òÕß url ±íÊ¾°´Å¥±»°´ÏÂÊ±´ò¿ªµÄ URL
+		//ä¸€ä¸ªæŒ‰é’®å¯¹è±¡å¿…é¡»æœ‰ title ï¼ˆæŒ‰é’®æ–‡å­—ï¼‰
+		//å¯é€‰ iconUrl è¡¨ç¤ºæŒ‰é’®å›¾æ ‡ URL
+		//å¯é€‰ onclick å³æŒ‰é’®è¢«æŒ‰ä¸‹æ—¶çš„å›è°ƒå‡½æ•°ï¼Œæˆ–è€… url è¡¨ç¤ºæŒ‰é’®è¢«æŒ‰ä¸‹æ—¶æ‰“å¼€çš„ URL
 	]
 };
 nman.create(obj.title, obj.data, options);

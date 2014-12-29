@@ -1,0 +1,23 @@
+{ 
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  
+  "name": "WebSocket Notifications",
+  "description": "Another simple notifications sample.",
+  "homepage_url": "http://lab.laobubu.net",
+
+  "permissions": [
+    "http://lab.laobubu.net:8000/",
+    "notifications"
+  ],
+  
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  
+  "manifest_version": 2,
+  "version": "1.0.0"
+}
